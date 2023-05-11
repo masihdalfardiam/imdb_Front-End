@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/imdb.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Imdb-api</title>
+</head>
+
+<body>
+    <header>
+        <section class="header-left">
+            <img src="images/logo.png" alt="logo" width="48">
+            <input type="text" id="search" placeholder="Search IMDB" name="search-movie">
+            <img src="images/search.png" id="search-btn" alt="search" width="16" class="pointer" onclick="search()">
+        </section>
+        <section class="header-right">
+            <input type="text" id="key" placeholder="API KEY" name="api-key">
+            <img src="images/toggle-on.png" id="toggle-on" alt="toggle-on" width="32" class="pointer" onclick="toggleTheme(this)">
+            <img src="images/toggle-off.png" id="toggle-off" alt="toggle-off" width="32" class="d-none pointer" onclick="toggleTheme(this)">
+        </section>
+    </header>
+    <main>
+        <div class="alert d-none">
+            <span class="closebtn" onclick="closeAlert()">&times;</span>
+            <p class="alert-top">Error Occurred!</p>
+            <span class="alert-text"></span>
+          </div>
+        <div class="loading-section">
+            <div class="loader"></div>
+            <span class="text-black loader-text">Loading Data from IMDB ...</span>
+        </div>
+        <section class="info">
+            <img src="images/poster.jpg" alt="Movie Poster" class="movie-card">
+            <section class="movie-info">
+                <div class="movie-info-header">
+                    <div class="movie-info-header-left">
+                        <p class="movie-name text-yellow">Breaking Bad</p>
+                        <p class="movie-time text-dark-white">2008 - 5 Seasons</p>
+                    </div>
+                    <div class="score">
+                        <img src="images/star.png" alt="score" width="64">
+                        <p class="text-white shadow-sm movie-score">9.5</p>
+                    </div>
+                </div>
+                <div class="tags text-dark-white">
+                    <p class="tag pointer">Crime</p>
+                    <p class="tag pointer">Drama</p>
+                    <p class="tag pointer">Thriller</p>
+                </div>
+                <p class="description text-dark-white">
+                    A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student in order to secure his family's future.
+                </p>
+                <hr class="op-half" />
+                <div class="director">
+                    <p class="text-white">Director</p>
+                    <p class="text-dark-white director-name">Vince Gilligan</p>
+                </div>
+                <hr />
+                <div class="writer">
+                    <p class="text-white">Writer</p>
+                    <p class="text-dark-white writer-name">Vince Gilligan</p>
+                </div>
+                <hr />
+                <div class="stars">
+                    <p class="text-white">Stars</p>
+                    <p class="text-dark-white stars-names">Bryan Cranston , Aaron Paul , Anna Gunn</p>
+                </div>
+                <hr />
+                <div class="titles">
+                    <p class="top card-white">Top rated TV #2</p>
+                    <p class="degrees card-yellow">Won 16 Primetime Emmys 155 wins & 247 nominations total</p>
+                </div>
+            </section>
+        </section>
+        <section class="similars">
+            <p class="similar-text text-white">More Like This</p>
+            <div class="similar-list">
+                <div class="similar">
+                    <img src="images/poster2.jpg" alt="similar movie" class="similar-img">
+                    <div class="similar-body">
+                        <div class="similar-score">
+                            <img src="images/star.png" alt="star" class="similar-star" width="16">
+                            <p class="text-dark-white similar-rate">8.9</p>
+                        </div>
+                        <p class="similar-name text-white">
+                            Better Call Saul
+                        </p>
+                    </div>
+                </div>
+                <div class="similar">
+                    <img src="images/poster3.jpg" alt="similar movie" class="similar-img">
+                    <div class="similar-body">
+                        <div class="similar-score">
+                            <img src="images/star.png" alt="star" class="similar-star" width="16">
+                            <p class="text-dark-white similar-rate">9.2</p>
+                        </div>
+                        <p class="similar-name text-white">
+                            Game Of Thrones
+                        </p>
+                    </div>
+                </div>
+                <div class="similar">
+                    <img src="images/poster4.jpg" alt="similar movie" class="similar-img">
+                    <div class="similar-body">
+                        <div class="similar-score">
+                            <img src="images/star.png" alt="star" class="similar-star" width="16">
+                            <p class="text-dark-white similar-rate">9.4</p>
+                        </div>
+                        <p class="similar-name text-white">
+                            Chernobyl
+                        </p>
+                    </div>
+                </div>
+                <div class="similar">
+                    <img src="images/poster5.jpg" alt="similar movie" class="similar-img">
+                    <div class="similar-body">
+                        <div class="similar-score">
+                            <img src="images/star.png" alt="star" class="similar-star" width="16">
+                            <p class="text-dark-white similar-rate">8.7</p>
+                        </div>
+                        <p class="similar-name text-white">
+                            Strange Things
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
